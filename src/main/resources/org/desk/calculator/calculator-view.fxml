@@ -21,7 +21,7 @@
       <Button onMouseClicked="#handleInputText" layoutX="320.0" layoutY="199.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="-" />
       <Button onMouseClicked="#handleInputText" layoutX="320.0" layoutY="266.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="/" />
       <Button onMouseClicked="#handleInputText" layoutX="320.0" layoutY="328.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="*" />
-      <Button layoutX="32.0" layoutY="328.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: #F28B82;" text="Delete" textAlignment="CENTER" textOverrun="CLIP">
+      <Button onMouseClicked="#delete" layoutX="32.0" layoutY="328.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: #F28B82;" text="Delete" textAlignment="CENTER" textOverrun="CLIP">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

@@ -4,38 +4,57 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
-import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CalcController {
     @FXML
     private TextField calculatorInput;
-    @FXML
-    private Button enter;
-
-    @FXML
-    protected void enter() {
-        System.out.println(calculatorInput.getText());
-    }
 
     @FXML
     protected void handleInputText(MouseEvent event) {
-        calculatorInput.setText(
-            calculatorInput.getText()
-            + Arrays.stream(event.getTarget().toString().split("'")).toList().getLast()
-        );
+        Button clickedButton = (Button) event.getSource();
+        calculatorInput.setText(calculatorInput.getText() + clickedButton.getText());
     }
 
     @FXML
-    protected void handleKeyPress(KeyEvent event) {
+    protected void handleKeyPress() {
         calculatorInput.setTextFormatter(new TextFormatter<>(change -> {
             String newText = change.getControlNewText();
             if (newText.matches("[0-9+\\-/*]*")) return change;
             return null;
         }));
+    }
+
+    @FXML
+    protected void enter() {
+        String input = calculatorInput.getText();
+        Pattern pattern = Pattern.compile("([0-9]+)([+\\-/*])([0-9]+)");
+        Matcher matcher = pattern.matcher(input);
+        if (matcher.matches()) {
+            String leftOperand = matcher.group(1);
+            String operator = matcher.group(2);
+            String rightOperand = matcher.group(3);
+            double result = performCalculation(leftOperand, operator, rightOperand);
+            calculatorInput.setText(String.valueOf(result));
+        } else {
+            calculatorInput.setText("Erro: Entrada inválida!");
+        }
+    }
+
+    private double performCalculation(String leftOperand, String operator, String rightOperand) {
+        double num1 = Double.parseDouble(leftOperand);
+        double num2 = Double.parseDouble(rightOperand);
+        return operator.equals("+") ? num1 + num2
+            : operator.equals("-") ? num1 - num2
+            : operator.equals("*") ? num1 * num2
+            : operator.equals("/") && num2 != 0 ? num1 / num2 : num1;
+    }
+
+    @FXML
+    protected void delete() {
+        calculatorInput.setText("");
     }
 }
