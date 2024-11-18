@@ -1,7 +1,9 @@
-# Calculator Application to Desktop
+# Desktop Calculator Application
 
 ## About
 
-Calculator System.
+A desktop calculator app.
 
-This is a basic calculator desktop application made with JavaFX.
+This is a basic desktop calculator application made with JavaFX.
+
+Learning purpose.

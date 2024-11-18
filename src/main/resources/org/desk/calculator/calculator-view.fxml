@@ -4,29 +4,29 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane fx:controller="org.desk.calculator.CalcController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.desk.calculator.CalcController">
    <children>
-      <TextField fx:id="calculatorInput" onKeyPressed="#handleKeyPress" layoutX="58.0" layoutY="41.0" prefHeight="51.0" prefWidth="311.0" />
-      <Button onMouseClicked="#handleInputText" layoutX="32.0" layoutY="134.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="1" />
-      <Button onMouseClicked="#handleInputText" layoutX="127.0" layoutY="134.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="2" />
-      <Button onMouseClicked="#handleInputText" layoutX="226.0" layoutY="134.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="3" />
-      <Button onMouseClicked="#handleInputText" layoutX="32.0" layoutY="199.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="4" />
-      <Button onMouseClicked="#handleInputText" layoutX="127.0" layoutY="199.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="5" />
-      <Button onMouseClicked="#handleInputText" layoutX="226.0" layoutY="199.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="6" />
-      <Button onMouseClicked="#handleInputText" layoutX="32.0" layoutY="266.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="7" />
-      <Button onMouseClicked="#handleInputText" layoutX="127.0" layoutY="266.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="8" />
-      <Button onMouseClicked="#handleInputText" layoutX="226.0" layoutY="266.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="9" />
-      <Button onMouseClicked="#handleInputText" layoutX="127.0" layoutY="328.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="0" />
-      <Button onMouseClicked="#handleInputText" layoutX="320.0" layoutY="134.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="+" />
-      <Button onMouseClicked="#handleInputText" layoutX="320.0" layoutY="199.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="-" />
-      <Button onMouseClicked="#handleInputText" layoutX="320.0" layoutY="266.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="/" />
-      <Button onMouseClicked="#handleInputText" layoutX="320.0" layoutY="328.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" text="*" />
-      <Button onMouseClicked="#delete" layoutX="32.0" layoutY="328.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: #F28B82;" text="Delete" textAlignment="CENTER" textOverrun="CLIP">
+      <TextField fx:id="calculatorInput" layoutX="58.0" layoutY="41.0" onKeyPressed="#handleKeyPress" prefHeight="51.0" prefWidth="311.0" style="-fx-font-size: 20px;" />
+      <Button layoutX="32.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="1" />
+      <Button layoutX="127.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="2" />
+      <Button layoutX="226.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="3" />
+      <Button layoutX="32.0" layoutY="199.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="4" />
+      <Button layoutX="127.0" layoutY="199.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="5" />
+      <Button layoutX="226.0" layoutY="199.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="6" />
+      <Button layoutX="32.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="7" />
+      <Button layoutX="127.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="8" />
+      <Button layoutX="226.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="9" />
+      <Button layoutX="127.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="0" />
+      <Button layoutX="320.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="+" />
+      <Button layoutX="320.0" layoutY="199.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="-" />
+      <Button layoutX="320.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="/" />
+      <Button layoutX="320.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#handleInputText" prefHeight="42.0" prefWidth="75.0" text="*" />
+      <Button onMouseEntered="#handleDelMouseEntered" onMouseExited="#handleDelMouseLeave" layoutX="32.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#delete" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: #F09898;" text="Delete" textAlignment="CENTER" textOverrun="CLIP">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button onMouseClicked="#enter" layoutX="226.0" layoutY="328.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: #81C784;" text="Enter">
+      <Button onMouseEntered="#handleEnterMouseEntered" onMouseExited="#handleEnterMouseLeave" layoutX="226.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#enter" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: #C7F7C7;" text="Enter">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>

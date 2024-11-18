@@ -39,9 +39,9 @@ public class CalcController {
             String rightOperand = matcher.group(3);
             double result = performCalculation(leftOperand, operator, rightOperand);
             calculatorInput.setText(String.valueOf(result));
-        } else {
-            calculatorInput.setText("Erro: Entrada inválida!");
+            return;
         }
+        calculatorInput.setText("Erro: Entrada inválida!");
     }
 
     private double performCalculation(String leftOperand, String operator, String rightOperand) {
@@ -56,5 +56,29 @@ public class CalcController {
     @FXML
     protected void delete() {
         calculatorInput.setText("");
+    }
+
+    @FXML
+    protected void handleEnterMouseEntered(MouseEvent event) {
+        Button hoveredButton = (Button) event.getSource();
+        hoveredButton.setStyle("-fx-background-color: #A1E8A1;");
+    }
+
+    @FXML
+    protected void handleEnterMouseLeave(MouseEvent event) {
+        Button hoveredButton = (Button) event.getSource();
+        hoveredButton.setStyle("-fx-background-color: #C7F7C7;");
+    }
+
+    @FXML
+    protected void handleDelMouseEntered(MouseEvent event) {
+        Button hoveredButton = (Button) event.getSource();
+        hoveredButton.setStyle("-fx-background-color: #E47474;");
+    }
+
+    @FXML
+    protected void handleDelMouseLeave(MouseEvent event) {
+        Button hoveredButton = (Button) event.getSource();
+        hoveredButton.setStyle("-fx-background-color: #F09898;");
     }
 }
