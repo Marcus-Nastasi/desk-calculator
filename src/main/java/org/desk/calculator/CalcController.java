@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.input.MouseEvent;
 
+import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,22 +24,23 @@ public class CalcController {
     protected void handleKeyPress() {
         calculatorInput.setTextFormatter(new TextFormatter<>(change -> {
             String newText = change.getControlNewText();
-            if (newText.matches("[0-9+\\-/*]*")) return change;
+            if (newText.matches("[0-9+\\-/*].*")) return change;
             return null;
         }));
     }
 
     @FXML
     protected void enter() {
-        String input = calculatorInput.getText();
-        Pattern pattern = Pattern.compile("([0-9]+)([+\\-/*])([0-9]+)");
-        Matcher matcher = pattern.matcher(input);
+        Pattern pattern = Pattern.compile("(-?[0-9]+(?:\\.[0-9]+)?)([+\\-/*])(-?[0-9]+(?:\\.[0-9]+)?)");
+        Matcher matcher = pattern.matcher(calculatorInput.getText());
         if (matcher.matches()) {
             String leftOperand = matcher.group(1);
             String operator = matcher.group(2);
             String rightOperand = matcher.group(3);
             double result = performCalculation(leftOperand, operator, rightOperand);
-            calculatorInput.setText(String.valueOf(result));
+            DecimalFormat df = new DecimalFormat("#.###");
+            String out = df.format(result);
+            calculatorInput.setText(out.replace(",", "."));
             return;
         }
         calculatorInput.setText("Erro: Entrada inválida!");
