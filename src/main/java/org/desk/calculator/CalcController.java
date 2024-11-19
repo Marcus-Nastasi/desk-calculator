@@ -3,7 +3,6 @@ package org.desk.calculator;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TextFormatter;
 import javafx.scene.input.MouseEvent;
 
 import java.text.DecimalFormat;
@@ -22,16 +21,12 @@ public class CalcController {
 
     @FXML
     protected void enter() {
-        Pattern pattern = Pattern.compile("(-?[0-9]+(?:\\.[0-9]+)?)([+\\-/*])(-?[0-9]+(?:\\.[0-9]+)?)");
+        Pattern pattern = Pattern
+            .compile("(-?[0-9]+(?:\\.[0-9]+)?)([+\\-/*])(-?[0-9]+(?:\\.[0-9]+)?)");
         Matcher matcher = pattern.matcher(calculatorInput.getText());
         if (matcher.matches()) {
-            String leftOperand = matcher.group(1);
-            String operator = matcher.group(2);
-            String rightOperand = matcher.group(3);
-            double result = performCalculation(leftOperand, operator, rightOperand);
-            DecimalFormat df = new DecimalFormat("#.###");
-            String out = df.format(result);
-            calculatorInput.setText(out.replace(",", "."));
+            double result = performCalculation(matcher.group(1), matcher.group(2), matcher.group(3));
+            calculatorInput.setText(new DecimalFormat("#.###").format(result).replace(",", "."));
             return;
         }
         calculatorInput.setText("Erro: Entrada inválida!");
