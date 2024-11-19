@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="calculator">
+    <output-path>$PROJECT_DIR$/out/artifacts/calculator</output-path>
+    <root id="archive" name="calculator.jar">
+      <element id="module-output" name="calculator" />
+      <element id="library" level="project" name="Maven: com.dlsc.formsfx:formsfx-core:11.6.0" />
+      <element id="library" level="project" name="Maven: eu.hansolo:tilesfx:11.48" />
+      <element id="library" level="project" name="Maven: net.synedra:validatorfx:0.4.0" />
+      <element id="library" level="project" name="Maven: org.controlsfx:controlsfx:11.1.2" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-core:12.3.1" />
+      <element id="library" level="project" name="Maven: org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:21" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-javafx:12.3.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:linux:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:linux:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:linux:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:linux:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:linux:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-swing:linux:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-swing:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-web:21" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-web:linux:21" />
+    </root>
+  </artifact>
+</component>

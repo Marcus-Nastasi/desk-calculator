@@ -21,15 +21,6 @@ public class CalcController {
     }
 
     @FXML
-    protected void handleKeyPress() {
-        calculatorInput.setTextFormatter(new TextFormatter<>(change -> {
-            String newText = change.getControlNewText();
-            if (newText.matches("[0-9+\\-/*].*")) return change;
-            return null;
-        }));
-    }
-
-    @FXML
     protected void enter() {
         Pattern pattern = Pattern.compile("(-?[0-9]+(?:\\.[0-9]+)?)([+\\-/*])(-?[0-9]+(?:\\.[0-9]+)?)");
         Matcher matcher = pattern.matcher(calculatorInput.getText());
@@ -57,7 +48,7 @@ public class CalcController {
 
     @FXML
     protected void delete() {
-        calculatorInput.setText("");
+        calculatorInput.clear();
     }
 
     @FXML
