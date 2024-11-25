@@ -26,7 +26,7 @@ public class CalcController {
         Matcher matcher = pattern.matcher(calculatorInput.getText());
         if (matcher.matches()) {
             double result = performCalculation(matcher.group(1), matcher.group(2), matcher.group(3));
-            calculatorInput.setText(new DecimalFormat("#.###").format(result).replace(",", "."));
+            calculatorInput.setText(new DecimalFormat("#.##").format(result).replace(",", "."));
             return;
         }
         calculatorInput.setText("Erro: Entrada inválida!");
