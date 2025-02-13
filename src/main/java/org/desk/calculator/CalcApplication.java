@@ -7,8 +7,21 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ *
+ * @author Marcus V. R. Nastasi
+ * @version 1.0.1
+ * @since 2024
+ */
 public class CalcApplication extends Application {
 
+    /**
+     *
+     * The start method, create Scene, Stage and FXML Loader.
+     *
+     * @param stage the Stage received by params.
+     * @throws IOException throws IOException if fails to build.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(CalcApplication.class.getResource("calculator-view.fxml"));
