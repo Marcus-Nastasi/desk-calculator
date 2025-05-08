@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- *
  * @author Marcus V. R. Nastasi
  * @version 1.0.1
  * @since 2024
@@ -16,7 +15,6 @@ import java.io.IOException;
 public class CalcApplication extends Application {
 
     /**
-     *
      * The start method, create Scene, Stage and FXML Loader.
      *
      * @param stage the Stage received by params.

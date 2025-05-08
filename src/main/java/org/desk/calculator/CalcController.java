@@ -10,7 +10,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
  * @author Marcus V. R. Nastasi
  * @version 1.0.1
  * @since 2024
@@ -18,14 +17,12 @@ import java.util.regex.Pattern;
 public class CalcController {
 
     /**
-     *
      * The input element text 'display'.
      */
     @FXML
     private TextField calculatorInput;
 
     /**
-     *
      * This function handle the keyword inputs on display.
      *
      * @param event a click event that is called on button click.
@@ -37,7 +34,6 @@ public class CalcController {
     }
 
     /**
-     *
      * Function responsible for verify the pattern match, call to perform calculation
      * and formatting response or error.
      */
@@ -54,8 +50,7 @@ public class CalcController {
     }
 
     /**
-     *
-     * This function does the calculation based on two operands and a operator.
+     * This function does the calculation based on two operands and an operator.
      *
      * @param leftOperand first operand.
      * @param operator the operator (+, -, *, /).
@@ -72,7 +67,6 @@ public class CalcController {
     }
 
     /**
-     *
      * Clear the display.
      */
     @FXML
@@ -81,7 +75,6 @@ public class CalcController {
     }
 
     /**
-     *
      * Button 'enter' mouse over's color change.
      *
      * @param event the mouse event.
@@ -93,7 +86,6 @@ public class CalcController {
     }
 
     /**
-     *
      * Button 'enter' mouse leave's color change.
      *
      * @param event the mouse event.
@@ -105,7 +97,6 @@ public class CalcController {
     }
 
     /**
-     *
      * Button 'delete' mouse over's color change.
      *
      * @param event the mouse event.
@@ -117,7 +108,6 @@ public class CalcController {
     }
 
     /**
-     *
      * Button 'delete' mouse leave's color change.
      *
      * @param event the mouse event.
